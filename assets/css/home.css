@@ -1,0 +1,33 @@
+body {
+  background-color: #f0f0f0 !important;
+}
+.container {
+  background-color: #fff !important;
+  padding: 20px;
+  border-radius: 10px;
+}
+label {
+  display: flex;
+  justify-content: flex-start;
+}
+.btn_add {
+  width: 100%;
+  border: 1px solid #333 !important;
+  background-color: #333 !important;
+}
+.btn_add:hover {
+  opacity: 0.8;
+}
+.btn-success {
+  border: 1px solid #06c046 !important;
+  background-color: #06c046 !important;
+}
+hr {
+  height: 0.1px !important;
+  color: #06c046 !important;
+  width: 100% !important;
+  background-color: red;
+}
+.bi-arrow-right-circle {
+  font-size: 30px;
+}
