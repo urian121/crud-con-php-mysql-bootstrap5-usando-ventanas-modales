@@ -23,7 +23,7 @@
     $totalEmpleados = $empleados->num_rows;
     ?>
 
-    <h1 class="text-center mt-5 mb-5 fw-bold">CRUD de Empleados en PHP, MODALES y MySQL</h1>
+    <h1 class="text-center mt-5 mb-5 fw-bold">CRUD completo con PHP, MySQL y Bootstrap 5 usando Modales</h1>
 
     <div class="container">
         <div class="row justify-content-md-center">
@@ -53,6 +53,7 @@
     <script src="assets/js/acciones.js"></script>
     <script src="assets/js/addEmpleado.js"></script>
     <script src="assets/js/editarEmpleado.js"></script>
+    <script src="assets/js/listaEmpleados.js"></script>
 
     <!------------------css para la tabla de empleados-------------------------->
     <script src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>

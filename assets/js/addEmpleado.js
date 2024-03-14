@@ -14,7 +14,9 @@ async function registrarEmpleado(event) {
 
     // Verificar la respuesta del backend
     if (response.status === 200) {
-      console.log("Empleado registrado exitosamente");
+      // Llamar a la función para actualizar la tabla de empleados
+      window.actualizarTablaEmpleados();
+
       setTimeout(() => {
         $("#staticBackdrop").css("opacity", "");
         $("#staticBackdrop").modal("hide");

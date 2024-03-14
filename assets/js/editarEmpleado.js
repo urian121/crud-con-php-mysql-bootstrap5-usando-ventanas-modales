@@ -55,11 +55,10 @@ async function cargarDatosEmpleadoEditar(idEmpleado) {
       document.querySelector("#nombre").value = nombre;
       document.querySelector("#edad").value = edad;
       document.querySelector("#cedula").value = cedula;
+      document.querySelector("#telefono").value = telefono;
 
       // Seleccionar el sexo correspondiente
       seleccionarSexo(sexo);
-
-      document.querySelector("#telefono").value = telefono;
 
       // Obtener el elemento <select> de cargo
       seleccionarCargo(cargo);
@@ -118,6 +117,10 @@ async function actualizarEmpleado(event) {
     // Verificar la respuesta del backend
     if (response.status === 200) {
       console.log("Empleado actualizado exitosamente");
+
+      // Llamar a la función para actualizar la tabla de empleados
+      window.actualizarTablaEmpleados();
+
       setTimeout(() => {
         $("#editarEmpleadoModal").css("opacity", "");
         $("#editarEmpleadoModal").modal("hide");

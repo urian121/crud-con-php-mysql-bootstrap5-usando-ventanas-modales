@@ -1,8 +1,13 @@
-# Sistema CRUD de Empleados en PHP utilizando PDO y MySQL
+# CRUD completo con PHP, MySQL y Bootstrap 5 usando Modales
 
-##### CRUD con PHP, MySQL y Bootstrap 5 usando modales describe un sistema básico de gestión de datos que permite realizar operaciones de creación (Create), lectura (Read), actualización (Update) y eliminación (Delete) utilizando tecnologías como PHP, MySQL y Bootstrap 5, con el uso de modales para una experiencia de usuario más interactiva.
+##### CRUD con PHP, MySQL y Bootstrap 5 mediante modales, sistema completo de gestión de datos, abarcando operaciones de (Create, Read, Update y Delete). Utiliza PHP, MySQL y Bootstrap 5 para la interfaz, ofreciendo una experiencia interactiva a través de modales.
 
-![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/crud-php-pdo-mysql.png)
+![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/crud-php-mysql-modales.png)
+
+##### Nota:
+
+    Llamando a la funcion window.actualizarTablaEmpleados(); desde otro archivo donde ella no esta definida
+    Al llamar a window.actualizarTablaEmpleados();, estás invocando la función actualizarTablaEmpleados() que está definida en el ámbito global del objeto window. Esto se puede hacer porque en JavaScript, todas las variables y funciones globales se agregan como propiedades del objeto window en el contexto del navegador. Esta técnica te permite acceder a la función desde cualquier parte de tu código, lo que facilita su uso en diferentes archivos o partes de tu aplicación.
 
 ### Expresiones de Gratitud 🎁
 
