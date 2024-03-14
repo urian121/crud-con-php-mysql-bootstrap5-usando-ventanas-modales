@@ -1,6 +1,6 @@
 # Sistema CRUD de Empleados en PHP utilizando PDO y MySQL
 
-##### El proyecto "Sistema CRUD de Empleados en PHP utilizando PDO y MySQL" es una aplicación web que permite realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) sobre una tabla de empleados en una base de datos MySQL. La aplicación está desarrollada en PHP utilizando el patrón de diseño PDO (PHP Data Objects) para la interacción con la base de datos.
+##### CRUD con PHP, MySQL y Bootstrap 5 usando modales describe un sistema básico de gestión de datos que permite realizar operaciones de creación (Create), lectura (Read), actualización (Update) y eliminación (Delete) utilizando tecnologías como PHP, MySQL y Bootstrap 5, con el uso de modales para una experiencia de usuario más interactiva.
 
 ![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/crud-php-pdo-mysql.png)
 

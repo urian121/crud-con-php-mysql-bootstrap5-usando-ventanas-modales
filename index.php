@@ -18,6 +18,9 @@
     <?php
     include("config/config.php");
     include("acciones/acciones.php");
+
+    $empleados = obtenerEmpleados($conexion);
+    $totalEmpleados = $empleados->num_rows;
     ?>
 
     <h1 class="text-center mt-5 mb-5 fw-bold">CRUD de Empleados en PHP, MODALES y MySQL</h1>
@@ -31,30 +34,27 @@
                             <i class="bi bi-person-plus"></i>
                         </a>
                     </span>
-                    Lista de empleados
+                    Lista de empleados (<?php echo $totalEmpleados ?>)
                     <span class="float-end">
                         <a href="acciones/exportar.php" class="btn btn-success" title="Exportar a CSV" download="empleados.csv"><i class="bi bi-filetype-csv"></i></a>
                     </span>
                     <hr>
                 </h1>
                 <?php
-                $empleados = obtenerEmpleados($conexion);
-                $totalEmpleados = $empleados->num_rows;
-                echo "Total de empleados: <strong>" . $totalEmpleados . "</strong>";
                 include("empleados.php"); ?>
             </div>
         </div>
     </div>
 
 
-
-
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="assets/js/acciones.js"></script>
+    <script src="assets/js/addEmpleado.js"></script>
+    <script src="assets/js/editarEmpleado.js"></script>
 
     <!------------------css para la tabla de empleados-------------------------->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.0.1/js/dataTables.bootstrap5.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json"></script>

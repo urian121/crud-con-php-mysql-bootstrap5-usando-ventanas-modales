@@ -198,7 +198,6 @@ async function cargarDetalleEmpleado(idEmpleado) {
         </li>
          <li class="list-group-item"><b>Avatar:</b> ${avatarHTML}</li>
       `;
-      // Repite este proceso para otros detalles del empleado...
     } else {
       alert(`Error al cargar los detalles del empleado con ID ${idEmpleado}`);
     }
