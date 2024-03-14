@@ -31,3 +31,12 @@ hr {
 .bi-arrow-right-circle {
   font-size: 30px;
 }
+.titulo_modal {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #444;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}

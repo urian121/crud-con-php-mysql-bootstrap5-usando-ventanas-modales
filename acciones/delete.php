@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verificar si los datos se decodificaron correctamente
     if ($data !== null) {
         $id = $data['id'];
-        $avatarName = $data['nombre'];
+        $avatarName = $data['avatar'];
 
         $sql = "DELETE FROM tbl_empleados WHERE id=$id";
         if ($conexion->query($sql) === TRUE) {

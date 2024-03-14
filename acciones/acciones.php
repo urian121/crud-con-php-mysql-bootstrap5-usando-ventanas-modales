@@ -61,34 +61,3 @@ function obtenerEmpleados($conexion)
     }
     return $resultado;
 }
-
-
-/**
- * Función para obtener un solo empleado de acuerdo al ID
- */
-function obtenerDatosEmpleado($conexion, $id)
-{
-    $sql = ("SELECT * FROM tbl_empleados WHERE id = $id");
-    $query = $conexion->query($sql);
-    if (!$query) {
-        return false;
-    }
-    $empleado = $query->fetch_assoc();
-    return $empleado;
-}
-
-/**
- * Función para obtener el total de empleados   
- */
-/*
-function obtenerTotalEmpleados($conexion)
-{
-    $sql = "SELECT COUNT(*) as total FROM tbl_empleados";
-    $resultado = $conexion->query($sql);
-    if (!$resultado) {
-        return 0;
-    }
-    $fila = $resultado->fetch_assoc();
-    return $fila['total'];
-}
-*/
