@@ -40,3 +40,9 @@ hr {
   font-size: 20px;
   text-align: center;
 }
+thead tr th {
+  text-align: start !important;
+}
+tr td {
+  text-align: start !important;
+}

@@ -110,6 +110,7 @@ async function actualizarEmpleado(event) {
     const formulario = document.querySelector("#formularioEmpleadoEdit");
     // Crear un objeto FormData para enviar los datos del formulario
     const formData = new FormData(formulario);
+    const idempleado = formData.get("id");
 
     // Enviar los datos del formulario al backend usando Axios
     const response = await axios.post("acciones/updateEmpleado.php", formData);
@@ -119,7 +120,13 @@ async function actualizarEmpleado(event) {
       console.log("Empleado actualizado exitosamente");
 
       // Llamar a la función para actualizar la tabla de empleados
-      window.actualizarTablaEmpleados();
+      window.actualizarEmpleadoEdit(idempleado);
+
+      //Llamar a la función para mostrar un mensaje de éxito
+      if (window.toastrOptions) {
+        toastr.options = window.toastrOptions;
+        toastr.success("¡El empleado se actualizo correctamente!.");
+      }
 
       setTimeout(() => {
         $("#editarEmpleadoModal").css("opacity", "");
