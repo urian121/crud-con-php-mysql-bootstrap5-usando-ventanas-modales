@@ -63,7 +63,7 @@
     <script src="assets/js/refreshTableEdit.js"></script>
     <script src="assets/js/alertas.js"></script>
 
-    <!------------------css para la tabla de empleados-------------------------->
+    <!------------------JS para la tabla de empleados-------------------------->
     <script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.0.2/js/dataTables.bootstrap5.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json"></script>
