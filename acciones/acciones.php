@@ -18,8 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cargo = trim($_POST['cargo']);
 
     $dirLocal = "fotos_empleados";
-    print_r($_FILES);
-    print_r(($_POST));
 
     if (isset($_FILES['avatar'])) {
         $archivoTemporal = $_FILES['avatar']['tmp_name'];
