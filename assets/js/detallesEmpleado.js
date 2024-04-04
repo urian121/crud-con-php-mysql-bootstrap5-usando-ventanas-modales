@@ -18,6 +18,7 @@ async function verDetallesEmpleado(idEmpleado) {
     if (!response.ok) {
       throw new Error("Error al cargar la modal de detalles del empleado");
     }
+    // response.text() es un método en programación que se utiliza para obtener el contenido de texto de una respuesta HTTP
     const modalHTML = await response.text();
 
     // Crear un elemento div para almacenar el contenido de la modal
