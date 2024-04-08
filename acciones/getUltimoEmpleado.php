@@ -2,9 +2,6 @@
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     include("../config/config.php");
 
-    // Obtener el ID de empleado de la solicitud GET y asegurarse de que sea un entero
-    $IdEmpleado = (int)$_GET['id'];
-
     // Realizar la consulta para obtener los detalles del empleado con el ID proporcionado
     $sql = "SELECT * FROM tbl_empleados ORDER BY id DESC LIMIT 1";
     $resultado = $conexion->query($sql);

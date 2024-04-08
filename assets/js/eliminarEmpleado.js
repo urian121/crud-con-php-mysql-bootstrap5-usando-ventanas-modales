@@ -3,6 +3,15 @@
  */
 async function cargarModalConfirmacion() {
   try {
+    const existingModal = document.getElementById("editarEmpleadoModal");
+    if (existingModal) {
+      const modal = bootstrap.Modal.getInstance(existingModal);
+      if (modal) {
+        modal.hide();
+      }
+      existingModal.remove(); // Eliminar la modal existente
+    }
+
     // Realizar una solicitud GET usando Fetch para obtener el contenido de la modal
     const response = await fetch("modales/modalDelete.php");
 

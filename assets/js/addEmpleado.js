@@ -3,7 +3,16 @@
  */
 async function modalRegistrarEmpleado() {
   try {
-    // Realizar una solicitud GET usando Fetch
+    // Ocultar la modal si está abierta
+    const existingModal = document.getElementById("detalleEmpleadoModal");
+    if (existingModal) {
+      const modal = bootstrap.Modal.getInstance(existingModal);
+      if (modal) {
+        modal.hide();
+      }
+      existingModal.remove(); // Eliminar la modal existente
+    }
+
     const response = await fetch("modales/modalAdd.php");
 
     if (!response.ok) {
@@ -21,7 +30,9 @@ async function modalRegistrarEmpleado() {
     document.body.appendChild(modalContainer);
 
     // Mostrar la modal
-    const myModal = new bootstrap.Modal(modalContainer.querySelector(".modal"));
+    const myModal = new bootstrap.Modal(
+      modalContainer.querySelector("#agregarEmpleadoModal")
+    );
     myModal.show();
   } catch (error) {
     console.error(error);
@@ -48,8 +59,8 @@ async function registrarEmpleado(event) {
       window.insertEmpleadoTable();
 
       setTimeout(() => {
-        $("#staticBackdrop").css("opacity", "");
-        $("#staticBackdrop").modal("hide");
+        $("#agregarEmpleadoModal").css("opacity", "");
+        $("#agregarEmpleadoModal").modal("hide");
 
         //Llamar a la función para mostrar un mensaje de éxito
         toastr.options = window.toastrOptions;
