@@ -122,15 +122,16 @@ async function actualizarEmpleado(event) {
       // Llamar a la función para actualizar la tabla de empleados
       window.actualizarEmpleadoEdit(idempleado);
 
-      //Llamar a la función para mostrar un mensaje de éxito
-      if (window.toastrOptions) {
-        toastr.options = window.toastrOptions;
-        toastr.success("¡El empleado se actualizo correctamente!.");
-      }
+      // Mostrar un mensaje de éxito al usuario
+      showToast.success("¡El empleado se actualizo correctamente!.", {
+        transition: "slideInUp",
+        sound: true,
+      });
 
       setTimeout(() => {
-        $("#editarEmpleadoModal").css("opacity", "");
-        $("#editarEmpleadoModal").modal("hide");
+        const modalEl = document.getElementById("editarEmpleadoModal");
+        modalEl.style.opacity = "";
+        bootstrap.Modal.getInstance(modalEl).hide();
       }, 600);
     } else {
       console.error("Error al actualizar el empleado");

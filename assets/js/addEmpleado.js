@@ -59,12 +59,15 @@ async function registrarEmpleado(event) {
       window.insertEmpleadoTable();
 
       setTimeout(() => {
-        $("#agregarEmpleadoModal").css("opacity", "");
-        $("#agregarEmpleadoModal").modal("hide");
+        const modalEl = document.getElementById("agregarEmpleadoModal");
+        modalEl.style.opacity = "";
+        bootstrap.Modal.getInstance(modalEl).hide();
 
-        //Llamar a la función para mostrar un mensaje de éxito
-        toastr.options = window.toastrOptions;
-        toastr.success("¡El empleado se actualizo correctamente!.");
+        // Mostrar un mensaje de éxito al usuario
+        showToast.success("¡El empleado se registró correctamente!.", {
+          transition: "swingInverted",
+          sound: true,
+        });
       }, 600);
     } else {
       console.error("Error al registrar el empleado");

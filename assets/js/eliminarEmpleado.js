@@ -70,11 +70,11 @@ async function eliminarEmpleado(idEmpleado, avatarEmpleado) {
           if (response.status === 200) {
             // Eliminar la fila correspondiente a este empleado de la tabla
             document.querySelector(`#empleado_${idEmpleado}`).remove();
-            //Llamar a la función para mostrar un mensaje de éxito
-            if (window.toastrOptions) {
-              toastr.options = window.toastrOptions;
-              toastr.error("¡El empleado se elimino correctamente!.");
-            }
+            // Mostrar un mensaje de éxito al usuario
+            showToast.error("¡El empleado se elimino correctamente!.", {
+              transition: "bounceInDown",
+              sound: true,
+            });
           } else {
             alert(`Error al eliminar el empleado con ID ${idEmpleado}`);
           }
