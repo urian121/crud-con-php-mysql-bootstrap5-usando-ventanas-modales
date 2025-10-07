@@ -13,6 +13,16 @@ async function modalRegistrarEmpleado() {
       existingModal.remove(); // Eliminar la modal existente
     }
 
+    // Eliminar modal anterior de agregar empleado si existe
+    const existingAddModal = document.getElementById("agregarEmpleadoModal");
+    if (existingAddModal) {
+      const modal = bootstrap.Modal.getInstance(existingAddModal);
+      if (modal) {
+        modal.hide();
+      }
+      existingAddModal.parentElement.remove(); // Eliminar el contenedor completo
+    }
+
     const response = await fetch("modales/modalAdd.php");
 
     if (!response.ok) {
@@ -55,6 +65,9 @@ async function registrarEmpleado(event) {
 
     // Verificar la respuesta del backend
     if (response.status === 200) {
+      // Resetear el formulario después del registro exitoso
+      formulario.reset();
+      
       // Llamar a la función insertEmpleadoTable para insertar el nuevo registro en la tabla
       window.insertEmpleadoTable();
 
@@ -64,10 +77,15 @@ async function registrarEmpleado(event) {
         bootstrap.Modal.getInstance(modalEl).hide();
 
         // Mostrar un mensaje de éxito al usuario
-        showToast.success("¡El empleado se registró correctamente!.", {
+        showToast.success("¡Empleado registrado con éxito!", {
+          duration: 4000,
+          progress: true,
+          position: "top-left",
           transition: "swingInverted",
+          icon: '',
           sound: true,
         });
+        
       }, 600);
     } else {
       console.error("Error al registrar el empleado");

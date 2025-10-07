@@ -123,9 +123,12 @@ async function actualizarEmpleado(event) {
       window.actualizarEmpleadoEdit(idempleado);
 
       // Mostrar un mensaje de éxito al usuario
-      showToast.success("¡El empleado se actualizo correctamente!.", {
-        transition: "slideInUp",
-        sound: true,
+      showToast.info("¡Empleado actualizado con éxito!", {
+        duration: 4000,
+        progress: true,
+        position: "top-left",
+        transition: "swingInverted",
+        icon: '',
       });
 
       setTimeout(() => {
